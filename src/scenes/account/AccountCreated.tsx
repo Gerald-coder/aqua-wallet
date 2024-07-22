@@ -25,7 +25,7 @@ function AccountCreated() {
 
   const recoverAccount = useCallback(async (recoveryPhrase: string) => {
     const result = await generateKey(recoveryPhrase);
-    console.log(result);
+    // console.log(result);
 
     setAccount(result.account);
     setSeedphrase("");
@@ -51,6 +51,9 @@ function AccountCreated() {
     console.log({ result });
 
     setAccount(result.account);
+    // if (localStorage.getItem(recoveryPhraseKeyName) !== recoveryPhrase) {
+    //   localStorage.setItem(recoveryPhraseKeyName, recoveryPhrase);
+    // }
   }
 
   return (

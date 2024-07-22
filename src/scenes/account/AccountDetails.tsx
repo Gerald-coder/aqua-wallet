@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { sendToken } from "../../utils/transactioUtils";
 import { sepolia } from "../../scenes/chain";
 import { Account } from "../Account";
-// import AccountTransactions from "./AccountTransactions";
+import AccountTransactions from "./AccountTransactions";
 import { ethers } from "ethers";
 import { toFixedIfNecessary } from "../../utils/Accountutils";
 import "./account.css";
@@ -163,7 +163,7 @@ const AccountDetail: React.FC<AccountDetailProps> = ({ account }) => {
         </>
       )}
 
-      {/* <AccountTransactions account={account} /> */}
+      <AccountTransactions account={account} />
     </div>
   );
 };
